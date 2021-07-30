@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.351);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  border-radius: 40px;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 0px 40px;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.collage {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.collage > div {
+  width: 200px;
+  word-wrap: break-word;
+  background-color: rgb(131, 131, 131);
+  color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+span {
+  font-weight: bolder;
+  font-size: medium;
+}
+/* TODO: Write CSS rules that cause the header and .collage div to be centered on the page */
+
+/* TODO: Write CSS rules that ensure that no more than 4 photos appear on a row */
