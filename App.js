@@ -6,7 +6,7 @@ function getPhotoFromId(photoId) {
 // about various photos.
 const PHOTO_LIST_URL = "https://picsum.photos/list";
 
-const App = (props) => {
+const App = () => {
   // 1. Set up React.useState in order to create a variable that will be used to include an array of photos and a method to "setPhotos"
   let [photos, setPhotos] = React.useState()
   // 2. Declare a React.useEffect life cycle method
@@ -27,18 +27,12 @@ const App = (props) => {
       </header>
       <div className="collage">
         {photos && photos.map((photo) => (
-          <div>
+          <div key={photo.id}>
             <img
               alt={photo.filename}
               key={photo.id}
               src={getPhotoFromId(photo.id)}
             />
-            <p>
-              <span>{photo.filename}</span><br/>
-              <br />
-              #{photo.id}<br/>
-              {getPhotoFromId(photo.id)}<br/>
-            </p>
           </div>
         ))}
       </div>
